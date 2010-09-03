@@ -1,0 +1,7 @@
+D:\projects\LoanGeek\LoanGeek.Tests\bin\Release\LoanGeek.Tests.dll
+D:\projects\LoanGeek\LoanGeek.Tests\bin\Release\LoanGeek.Tests.pdb
+D:\projects\LoanGeek\LoanGeek.Tests\bin\Release\nunit.framework.dll
+D:\projects\LoanGeek\LoanGeek.Tests\bin\Release\nunit.framework.xml
+D:\projects\LoanGeek\LoanGeek.Tests\obj\Release\ResolveAssemblyReference.cache
+D:\projects\LoanGeek\LoanGeek.Tests\obj\Release\LoanGeek.Tests.dll
+D:\projects\LoanGeek\LoanGeek.Tests\obj\Release\LoanGeek.Tests.pdb
