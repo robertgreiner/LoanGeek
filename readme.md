@@ -3,7 +3,7 @@ LoanGeek
 
 A simple monthly payment calculator for a mortgage loan.
 
-You can use this tool for free at http://loangeek.net or download a copy for your own personal use.
+You can use this tool for free at <a href="http://loangeek.net">http://loangeek.net</a> or download a copy for your own personal use.
 
 Copyright
 ---------
