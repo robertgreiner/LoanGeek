@@ -44,6 +44,12 @@
     <Compile Include="TestLoanData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LoanGeek\LoanGeek.csproj">
+      <Project>{23B18499-7874-4A27-BE01-369A2FE7A33B}</Project>
+      <Name>LoanGeek</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

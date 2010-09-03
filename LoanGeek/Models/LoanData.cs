@@ -38,8 +38,11 @@ namespace LoanGeek.Models {
         public double MonthlyInterestMultiplier { get; private set; }
         public int AmortizedMonths { get; private set; }
         public double InterestOnlyMonthly { get; private set; }
-        public double PrincipleOnlyMonthly { get; private set; }
+        public double PrincipalOnlyMonthly { get; private set; }
         public double MonthlyPayment { get; private set; }
+
+        public double MonthlyPropertyTaxPayment { get; private set; }
+        public double MonthlyPmiPayment { get; private set; }
 
         public LoanData(double principal, double interest, int term, double tax, double pmi, double hoa, double insurance) {
             Principal = principal;
@@ -72,28 +75,28 @@ namespace LoanGeek.Models {
          * M = P * ( J / ( 1 - (1 + J)^-N ) )
          */
         private double CalculatePrincipalAndInterest() {
-            double principleAndInterest = 0.0;
+            double principalAndInterest = 0.0;
 
             MonthlyInterestMultiplier = InterestRate / (12 * 100);
             AmortizedMonths = LoanTerm * 12;
 
             double amortizedExpression = (1 - (Math.Pow((1 + MonthlyInterestMultiplier), -AmortizedMonths)));
-            principleAndInterest = Principal * (MonthlyInterestMultiplier / amortizedExpression);
+            principalAndInterest = Principal * (MonthlyInterestMultiplier / amortizedExpression);
 
             InterestOnlyMonthly = Principal * MonthlyInterestMultiplier;
-            PrincipleOnlyMonthly = principleAndInterest - InterestOnlyMonthly;
+            PrincipalOnlyMonthly = principalAndInterest - InterestOnlyMonthly;
 
-            return principleAndInterest;
+            return principalAndInterest;
         }
 
         private double CalculatePropertyTax() {
-            double propertyTax = (Principal * (InterestRate / 100)) / 12;
-            return propertyTax;
+            MonthlyPropertyTaxPayment = (Principal * (InterestRate / 100)) / 12;
+            return MonthlyPropertyTaxPayment;
         }
 
         private double CalculatePmi() {
-            double pmi = (Principal * (PmiPercent / 100)) / 12;
-            return pmi;
+            double MonthlyPmiPayment = (Principal * (PmiPercent / 100)) / 12;
+            return MonthlyPmiPayment;
         }
 
         private void CalculateTotalMonthlyPayment() {
