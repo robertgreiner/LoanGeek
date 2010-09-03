@@ -37,7 +37,21 @@ namespace LoanGeek.Models {
 
         public double MonthlyInterestMultiplier { get; private set; }
         public int AmortizedMonths { get; private set; }
+        public double InterestOnlyMonthly { get; private set; }
+        public double PrincipleOnlyMonthly { get; private set; }
         public double MonthlyPayment { get; private set; }
+
+        public LoanData(double principal, double interest, int term, double tax, double pmi, double hoa, double insurance) {
+            Principal = principal;
+            InterestRate = interest;
+            LoanTerm = term;
+            PropertyTaxPercent = tax;
+            PmiPercent = pmi;
+            HoaDuesYearly = hoa;
+            InsuranceYearly = insurance;
+
+            CalculateTotalMonthlyPayment();
+        }
 
         /**
          * How to Calculate Loan Amortization Schedules/Tables by Hand
@@ -65,6 +79,9 @@ namespace LoanGeek.Models {
 
             double amortizedExpression = (1 - (Math.Pow((1 + MonthlyInterestMultiplier), -AmortizedMonths)));
             principleAndInterest = Principal * (MonthlyInterestMultiplier / amortizedExpression);
+
+            InterestOnlyMonthly = Principal * MonthlyInterestMultiplier;
+            PrincipleOnlyMonthly = principleAndInterest - InterestOnlyMonthly;
 
             return principleAndInterest;
         }
