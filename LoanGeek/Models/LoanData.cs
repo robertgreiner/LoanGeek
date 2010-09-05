@@ -90,12 +90,12 @@ namespace LoanGeek.Models {
         }
 
         private double CalculatePropertyTax() {
-            MonthlyPropertyTaxPayment = (Principal * (InterestRate / 100)) / 12;
+            MonthlyPropertyTaxPayment = (Principal * (PropertyTaxPercent / 100)) / 12;
             return MonthlyPropertyTaxPayment;
         }
 
         private double CalculatePmi() {
-            double MonthlyPmiPayment = (Principal * (PmiPercent / 100)) / 12;
+            MonthlyPmiPayment = (Principal * (PmiPercent / 100)) / 12;
             return MonthlyPmiPayment;
         }
 
