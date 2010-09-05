@@ -56,6 +56,10 @@ namespace LoanGeek.Models {
             CalculateTotalMonthlyPayment();
         }
 
+        public LoanData() {
+
+        }
+
         /**
          * How to Calculate Loan Amortization Schedules/Tables by Hand
          * http://www.hughchou.org/calc/formula.html
