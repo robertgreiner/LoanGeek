@@ -16,7 +16,7 @@ namespace LoanGeek.Controllers {
         [HttpPost]
         public ActionResult Index(LoanData loanData) {
             loanData.CalculateTotalMonthlyPayment();
-            ViewData["monthlyPayment"] = Math.Round(loanData.MonthlyPayment, 2);
+            ViewData["MonthlyPayment"] = Math.Round(loanData.MonthlyPayment, 2);
             return View("Index", loanData);
         }
     }

@@ -19,6 +19,12 @@
         <input type="submit" value="Calculate Loan" />
     <% } %>
 
-    <p>Total Monthly Payment: <%: ViewData["monthlyPayment"] %></p>
+    <% if (ViewData["MonthlyPayment"] != null) { %>
+        <p>Total Monthly Payment: $<%: ViewData["MonthlyPayment"]%></p>
+        <p class="small">
+            Note: These values are estimates based on your input and current market trends.  
+            The results obtained from this site are not guaranteed to be accurate and should only be used for informational purposes.
+        </p>
+    <% } %>
 
 </asp:Content>
