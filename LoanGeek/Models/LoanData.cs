@@ -103,7 +103,7 @@ namespace LoanGeek.Models {
             return MonthlyPmiPayment;
         }
 
-        private void CalculateTotalMonthlyPayment() {
+        public void CalculateTotalMonthlyPayment() {
             MonthlyPayment = CalculatePrincipalAndInterest();
             MonthlyPayment += CalculatePropertyTax();
             MonthlyPayment += CalculatePmi();

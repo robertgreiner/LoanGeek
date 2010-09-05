@@ -18,4 +18,7 @@
         <p>Insurance: <%: Html.TextBoxFor(x => x.InsuranceYearly)%></p>
         <input type="submit" value="Calculate Loan" />
     <% } %>
+
+    <p>Total Monthly Payment: <%: ViewData["monthlyPayment"] %></p>
+
 </asp:Content>
