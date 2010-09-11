@@ -6,17 +6,17 @@
 
 <asp:Content ID="LoanGeekContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>LoanGeek</h2>
+    <h2>Mortgage Calculator</h2>
 
     <% using (Html.BeginForm()) { %>
-        <p>Loan Amount: <%: Html.TextBoxFor(x => x.Principal)%></p>
-        <p>Loan Term: <%: Html.TextBoxFor(x => x.LoanTerm)%></p>
-        <p>Interest Rate: <%: Html.TextBoxFor(x => x.InterestRate)%></p>
-        <p>Property Tax: <%: Html.TextBoxFor(x => x.PropertyTaxPercent)%></p>
-        <p>PMI: <%: Html.TextBoxFor(x => x.PmiPercent)%></p>
-        <p>HOA: <%: Html.TextBoxFor(x => x.HoaDuesYearly)%></p>
-        <p>Insurance: <%: Html.TextBoxFor(x => x.InsuranceYearly)%></p>
-        <input type="submit" value="Calculate Loan" />
+        <div class="label">Loan Amount</div> <%: Html.TextBoxFor(x => x.Principal)%><br />
+        <div class="label">Loan Term</div> <%: Html.TextBoxFor(x => x.LoanTerm)%></p><br />
+        <div class="label">Interest Rate</div> <%: Html.TextBoxFor(x => x.InterestRate)%></p><br />
+        <div class="label">Property Tax</div> <%: Html.TextBoxFor(x => x.PropertyTaxPercent)%></p><br />
+        <div class="label">PMI</div> <%: Html.TextBoxFor(x => x.PmiPercent)%></p><br />
+        <div class="label">HOA</div> <%: Html.TextBoxFor(x => x.HoaDuesYearly)%></p><br />
+        <div class="label">Insurance</div> <%: Html.TextBoxFor(x => x.InsuranceYearly)%></p><br />
+        <input class="button" type="submit" name="submit" value="Calculate Loan" />
     <% } %>
 
     <% if (ViewData["MonthlyPayment"] != null) { %>

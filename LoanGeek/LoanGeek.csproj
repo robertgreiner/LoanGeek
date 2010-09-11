@@ -73,6 +73,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\bg.jpg" />
+    <Content Include="Content\Images\bottom_panel.png" />
+    <Content Include="Content\Images\bottom_panel_clean.png" />
+    <Content Include="Content\Images\Icons\16_twitter.png" />
+    <Content Include="Content\Images\Icons\32_linkedin.png" />
+    <Content Include="Content\Images\Icons\32_mail.png" />
+    <Content Include="Content\Images\Icons\32_rss.png" />
+    <Content Include="Content\Images\Icons\32_twitter.png" />
+    <Content Include="Content\Images\Icons\error.png" />
+    <Content Include="Content\Images\Icons\tick2.png" />
+    <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\twitter.png" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Views\Home\Index.aspx" />
