@@ -10,12 +10,12 @@
 
     <% using (Html.BeginForm()) { %>
         <div class="label">Loan Amount</div> <%: Html.TextBoxFor(x => x.Principal)%><br />
-        <div class="label">Loan Term</div> <%: Html.TextBoxFor(x => x.LoanTerm)%></p><br />
-        <div class="label">Interest Rate</div> <%: Html.TextBoxFor(x => x.InterestRate)%></p><br />
-        <div class="label">Property Tax</div> <%: Html.TextBoxFor(x => x.PropertyTaxPercent)%></p><br />
-        <div class="label">PMI</div> <%: Html.TextBoxFor(x => x.PmiPercent)%></p><br />
-        <div class="label">HOA</div> <%: Html.TextBoxFor(x => x.HoaDuesYearly)%></p><br />
-        <div class="label">Insurance</div> <%: Html.TextBoxFor(x => x.InsuranceYearly)%></p><br />
+        <div class="label">Loan Term</div> <%: Html.TextBoxFor(x => x.LoanTerm)%><br />
+        <div class="label">Interest Rate</div> <%: Html.TextBoxFor(x => x.InterestRate)%><br />
+        <div class="label">Property Tax</div> <%: Html.TextBoxFor(x => x.PropertyTaxPercent)%><br />
+        <div class="label">PMI</div> <%: Html.TextBoxFor(x => x.PmiPercent)%><br />
+        <div class="label">HOA</div> <%: Html.TextBoxFor(x => x.HoaDuesYearly)%><br />
+        <div class="label">Insurance</div> <%: Html.TextBoxFor(x => x.InsuranceYearly)%><br />
         <input class="button" type="submit" name="submit" value="Calculate Loan" />
     <% } %>
 
