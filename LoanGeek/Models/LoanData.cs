@@ -57,7 +57,13 @@ namespace LoanGeek.Models {
         }
 
         public LoanData() {
-
+            Principal = 200000;
+            InterestRate = 4.5;
+            LoanTerm = 30;
+            PropertyTaxPercent = 3.0;
+            PmiPercent = 1.0;
+            HoaDuesYearly = 500.00;
+            InsuranceYearly = 1000.00;
         }
 
         /**

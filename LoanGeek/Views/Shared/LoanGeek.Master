@@ -21,7 +21,7 @@
 </head>
 <body id="top">
 <div id="container">
-    <div id="Div1">
+    <div id="header">
         <div class="logo">Logo</div>
     </div>
     <div class="section">
