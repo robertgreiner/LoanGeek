@@ -21,14 +21,17 @@
     <div class="clear"></div>
 
     <div class="box590">
+        
+        <p><h4>Loan Details</h4><br /></p>
+
         <% using (Html.BeginForm()) { %>
-            <div class="label">Loan Amount ($)</div> <%: Html.TextBoxFor(x => x.Principal)%><br />
-            <div class="label">Loan Term (years) </div> <%: Html.TextBoxFor(x => x.LoanTerm)%><br />
-            <div class="label">Interest Rate (%) </div> <%: Html.TextBoxFor(x => x.InterestRate)%><br />
-            <div class="label">Property Tax (%) </div> <%: Html.TextBoxFor(x => x.PropertyTaxPercent)%><br />
-            <div class="label">PMI (%) </div> <%: Html.TextBoxFor(x => x.PmiPercent)%><br />
-            <div class="label">HOA ($/year)</div> <%: Html.TextBoxFor(x => x.HoaDuesYearly)%><br />
-            <div class="label">Insurance ($/year) </div> <%: Html.TextBoxFor(x => x.InsuranceYearly)%><br />
+            <div class="label"><h3>Loan Amount ($)</h3> </h3></div> <%: Html.TextBoxFor(x => x.Principal)%><br />
+            <div class="label"><h3>Loan Term (years)</h3> </div> <%: Html.TextBoxFor(x => x.LoanTerm)%><br />
+            <div class="label"><h3>Interest Rate (%)</h3> </div> <%: Html.TextBoxFor(x => x.InterestRate)%><br />
+            <div class="label"><h3>Property Tax (%)</h3> </div> <%: Html.TextBoxFor(x => x.PropertyTaxPercent)%><br />
+            <div class="label"><h3>PMI (%)</h3> </div> <%: Html.TextBoxFor(x => x.PmiPercent)%><br />
+            <div class="label"><h3>HOA ($/year)</h3> </div> <%: Html.TextBoxFor(x => x.HoaDuesYearly)%><br />
+            <div class="label"><h3>Insurance ($/year)</h3> </div> <%: Html.TextBoxFor(x => x.InsuranceYearly)%><br />
             <input class="button" type="submit" name="submit" value="Calculate Loan" />
         <% } %>
     </div>
