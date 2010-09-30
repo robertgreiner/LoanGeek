@@ -25,6 +25,7 @@
         <p><h4>Loan Details</h4><br /></p>
 
         <% using (Html.BeginForm()) { %>
+            <%: Html.ValidationSummary() %>
             <div class="label"><h3>Loan Amount ($)</h3> </h3></div> <%: Html.TextBoxFor(x => x.Principal)%><br />
             <div class="label"><h3>Loan Term (years)</h3> </div> <%: Html.TextBoxFor(x => x.LoanTerm)%><br />
             <div class="label"><h3>Interest Rate (%)</h3> </div> <%: Html.TextBoxFor(x => x.InterestRate)%><br />

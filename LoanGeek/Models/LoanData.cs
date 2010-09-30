@@ -8,31 +8,24 @@ namespace LoanGeek.Models {
     public class LoanData {
 
         [Required(ErrorMessage = "Please enter your the total loan amount.")]
-        [RegularExpression(@"[0-9,.]?", ErrorMessage = "Please enter a valid loan amount.")]
         public double Principal { get; set; }
 
         [Required(ErrorMessage = "Please enter the interest rate.")]
-        [RegularExpression(@"[0-9,.]?", ErrorMessage = "Please enter a valid interest rate for your loan.")]
         public double InterestRate { get; set; }
 
         [Required(ErrorMessage = "Please enter the number of years of the loan.")]
-        [RegularExpression(@"[0-9]?", ErrorMessage = "Please enter a valid loan term.")]
         public int LoanTerm { get; set; }
 
         [Required(ErrorMessage = "Please enter the property tax.")]
-        [RegularExpression(@"[0-9,.]?", ErrorMessage = "Please enter a valid property tax amount..")]
         public double PropertyTaxPercent { get; set; }
 
         [Required(ErrorMessage = "Please enter your loan's PMI value.")]
-        [RegularExpression(@"[0-9,.]?", ErrorMessage = "Please enter a valid PMI percentage.")]
         public double PmiPercent { get; set; }
 
         [Required(ErrorMessage = "Please enter your yearly HOA dues.")]
-        [RegularExpression(@"[0-9,.]?", ErrorMessage = "Please enter a valid yearly HOA dues amount.")]
         public double HoaDuesYearly { get; set; }
 
         [Required(ErrorMessage = "Please enter your yearly insurance premium.")]
-        [RegularExpression(@"[0-9,.]?", ErrorMessage = "Please enter a valid yearly home insurance premium.")]
         public double InsuranceYearly { get; set; }
 
         public double MonthlyInterestMultiplier { get; private set; }
