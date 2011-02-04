@@ -26,13 +26,15 @@
 
         <% using (Html.BeginForm()) { %>
             <%: Html.ValidationSummary() %>
-            <div class="label"><h3>Loan Amount ($)</h3> </h3></div> <%: Html.TextBoxFor(x => x.Principal)%><br />
-            <div class="label"><h3>Loan Term (years)</h3> </div> <%: Html.TextBoxFor(x => x.LoanTerm)%><br />
-            <div class="label"><h3>Interest Rate (%)</h3> </div> <%: Html.TextBoxFor(x => x.InterestRate)%><br />
-            <div class="label"><h3>Property Tax (%)</h3> </div> <%: Html.TextBoxFor(x => x.PropertyTaxPercent)%><br />
-            <div class="label"><h3>PMI (%)</h3> </div> <%: Html.TextBoxFor(x => x.PmiPercent)%><br />
-            <div class="label"><h3>HOA ($/year)</h3> </div> <%: Html.TextBoxFor(x => x.HoaDuesYearly)%><br />
-            <div class="label"><h3>Insurance ($/year)</h3> </div> <%: Html.TextBoxFor(x => x.InsuranceYearly)%><br />
+            <div class="label"><h3>Purchase Price ($)</h3> </div> <%: Html.TextBoxFor(x => x.PurchasePrice) %><br />
+            <div class="label"><h3>Down Payment (%)</h3> </div> <%: Html.TextBoxFor(x => x.DownPayment) %><br />
+            <div class="label"><h3>Loan Amount ($)</h3> </div> <%: Html.TextBox("principal") %><br />
+            <div class="label"><h3>Loan Term (years)</h3> </div> <%: Html.TextBoxFor(x => x.LoanTerm) %><br />
+            <div class="label"><h3>Interest Rate (%)</h3> </div> <%: Html.TextBoxFor(x => x.InterestRate) %><br />
+            <div class="label"><h3>Property Tax (%)</h3> </div> <%: Html.TextBoxFor(x => x.PropertyTaxPercent) %><br />
+            <div class="label"><h3>PMI (%)</h3> </div> <%: Html.TextBoxFor(x => x.PmiPercent) %><br />
+            <div class="label"><h3>HOA ($/year)</h3> </div> <%: Html.TextBoxFor(x => x.HoaDuesYearly) %><br />
+            <div class="label"><h3>Insurance ($/year)</h3> </div> <%: Html.TextBoxFor(x => x.InsuranceYearly) %><br />
             <input class="button" type="submit" name="submit" value="Calculate Loan" />
         <% } %>
     </div>

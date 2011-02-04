@@ -7,8 +7,11 @@ using System.ComponentModel.DataAnnotations;
 namespace LoanGeek.Models {
     public class LoanData {
 
-        [Required(ErrorMessage = "Please enter your the total loan amount.")]
-        public double Principal { get; set; }
+        [Required(ErrorMessage = "Please enter your the purchase price for your new home.")]
+        public double PurchasePrice { get; set; }
+
+        [Required(ErrorMessage = "Please enter the downpayment amount.")]
+        public double DownPayment { get; set; }
 
         [Required(ErrorMessage = "Please enter the interest rate.")]
         public double InterestRate { get; set; }
@@ -28,6 +31,8 @@ namespace LoanGeek.Models {
         [Required(ErrorMessage = "Please enter your yearly insurance premium.")]
         public double InsuranceYearly { get; set; }
 
+        public double Principal { get; set; }
+
         public double MonthlyInterestMultiplier { get; private set; }
         public int AmortizedMonths { get; private set; }
         public double InterestOnlyMonthly { get; private set; }
@@ -37,8 +42,9 @@ namespace LoanGeek.Models {
         public double MonthlyPropertyTaxPayment { get; private set; }
         public double MonthlyPmiPayment { get; private set; }
 
-        public LoanData(double principal, double interest, int term, double tax, double pmi, double hoa, double insurance) {
-            Principal = principal;
+        public LoanData(double purchasePrice, double downPayment, double interest, int term, double tax, double pmi, double hoa, double insurance) {
+            PurchasePrice = purchasePrice;
+            DownPayment = downPayment;
             InterestRate = interest;
             LoanTerm = term;
             PropertyTaxPercent = tax;
@@ -50,7 +56,8 @@ namespace LoanGeek.Models {
         }
 
         public LoanData() {
-            Principal = 200000;
+            PurchasePrice = 200000;
+            DownPayment = 7.5;
             InterestRate = 4.5;
             LoanTerm = 30;
             PropertyTaxPercent = 3.0;
@@ -92,8 +99,9 @@ namespace LoanGeek.Models {
             return principalAndInterest;
         }
 
+        //Property tax is based on the appraisal value of the home.  Usually, this is the same as the purchase price.
         private double CalculatePropertyTax() {
-            MonthlyPropertyTaxPayment = (Principal * (PropertyTaxPercent / 100)) / 12;
+            MonthlyPropertyTaxPayment = (PurchasePrice * (PropertyTaxPercent / 100)) / 12;
             return MonthlyPropertyTaxPayment;
         }
 
@@ -102,7 +110,12 @@ namespace LoanGeek.Models {
             return MonthlyPmiPayment;
         }
 
+        private void CalculatePrincipal() {
+            Principal = PurchasePrice - (PurchasePrice * (DownPayment / 100));
+        }
+
         public void CalculateTotalMonthlyPayment() {
+            CalculatePrincipal();
             MonthlyPayment = CalculatePrincipalAndInterest();
             MonthlyPayment += CalculatePropertyTax();
             MonthlyPayment += CalculatePmi();
