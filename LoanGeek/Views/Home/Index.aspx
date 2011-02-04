@@ -28,7 +28,7 @@
             <%: Html.ValidationSummary() %>
             <div class="label"><h3>Purchase Price ($)</h3> </div> <%: Html.TextBoxFor(x => x.PurchasePrice) %><br />
             <div class="label"><h3>Down Payment (%)</h3> </div> <%: Html.TextBoxFor(x => x.DownPayment) %><br />
-            <div class="label"><h3>Loan Amount ($)</h3> </div> <%: Html.TextBox("principal") %><br />
+            <!-- <div class="label"><h3>Loan Amount ($)</h3> </div> <%: Html.TextBox("principal") %><br /> -->
             <div class="label"><h3>Loan Term (years)</h3> </div> <%: Html.TextBoxFor(x => x.LoanTerm) %><br />
             <div class="label"><h3>Interest Rate (%)</h3> </div> <%: Html.TextBoxFor(x => x.InterestRate) %><br />
             <div class="label"><h3>Property Tax (%)</h3> </div> <%: Html.TextBoxFor(x => x.PropertyTaxPercent) %><br />
