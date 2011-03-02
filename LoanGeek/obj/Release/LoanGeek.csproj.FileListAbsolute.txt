@@ -1,5 +1,0 @@
-D:\projects\LoanGeek\LoanGeek\bin\LoanGeek.dll
-D:\projects\LoanGeek\LoanGeek\bin\LoanGeek.pdb
-D:\projects\LoanGeek\LoanGeek\obj\Release\ResolveAssemblyReference.cache
-D:\projects\LoanGeek\LoanGeek\obj\Release\LoanGeek.dll
-D:\projects\LoanGeek\LoanGeek\obj\Release\LoanGeek.pdb
